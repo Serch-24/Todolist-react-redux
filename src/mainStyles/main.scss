@@ -1,0 +1,20 @@
+@use "reset";
+@use "variables";
+
+.header-task{
+  &--container{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 80px 50px;
+    
+  }
+
+  &--title{
+    justify-self: center;
+    align-items: center;
+    font-family: variables.$primary-font;
+    font-size: 3em;
+    margin: 30px;
+  }
+  
+}

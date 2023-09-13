@@ -1,0 +1,90 @@
+@use "../../../mainStyles/variables";
+
+.edittask{
+  
+  &-overlay{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+
+  &-form{
+    
+    &-container{
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 40% 60%;
+      background-color: #fff;
+      border-radius: 5px;
+      place-items: center;
+    }
+
+    &-title{
+      color: variables.$primary-color;
+      align-self: center;
+      margin-top: 10px;
+      
+      & h2{
+        font-size: 2em;
+      }
+    }
+
+    &--container-form{
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+
+    &-fields{
+      display: grid;
+      grid-template-columns: 150px auto;
+      grid-template-rows: 25px;
+      gap: 0.5em;
+      margin: 10px 20px 0 20px;
+      place-content: center;
+
+      &-title{
+        border-radius: 5px;
+        padding-left: 8px;
+      }
+
+      &-select{
+        border-radius: 5px;
+      }
+    }
+
+    &-actionbuttons{
+      display: grid;
+      grid-template-columns: 30% 30%;
+      grid-template-rows: 1fr;
+      gap: 0.5em;
+      margin: 15px 0 15px 0;
+      place-content: center;
+
+      &-update{
+        background-color: #4DB5FB;
+        color: #fff;
+        border-radius: 5px;
+        border-color: transparent;
+        padding: 5px;
+      }
+
+      &-cancel{
+        background-color: #FC5185;
+        color: #fff;
+        border-radius: 5px;
+        border-color: transparent;
+        padding: 5px;
+      }
+    }
+  }
+}

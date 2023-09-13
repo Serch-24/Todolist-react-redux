@@ -1,0 +1,83 @@
+@use "../../../mainStyles/variables";
+
+.addtask-form{
+  &--container{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50px 30px;
+    gap: 1em;
+  }
+
+  &--title{
+    font-family: variables.$primary-font;
+    font-size: 2rem;
+  }
+
+  &--form{
+    display: grid;
+    grid-template-columns: 200px 100px 50px;
+    grid-template-rows: 100%;
+    gap: 0.5em;
+    align-items: center;
+
+      &-titleinput{
+        padding: 5px;
+        border-radius: 5px;
+        margin-top: 5px;
+        border: none;
+        transition: border ease-in-out 0.1s;
+
+        &:focus{
+          border: #4DB5FB 2px solid;
+        }
+      }
+
+      &-priorityinput{
+        padding: 5px;
+        border-radius: 5px;
+        margin-top: 5px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-image: url('../../../assets/abajo.png');
+        background-position: right center;
+        background-repeat: no-repeat;
+        padding-right: 20px;
+        padding-left: 10px;
+        transition: border ease-in-out 0.1s;
+
+        &:focus{
+          border: #4DB5FB 2px solid;
+        }
+
+        & option{
+          margin: 5px;
+        }
+
+        & .High{
+          background-color: #e6ec7b;
+        }
+
+        & .Medium{
+          background-color: #FFD9C0;
+        }
+
+        & .Low{
+          background-color: #a091f6;
+        }
+      }
+
+      &-submit {
+          padding: 3px;
+          border-radius: 5px;
+          background-color: #4DB5FB;
+          color: #fff;
+          font-weight: 600;
+          border-color: transparent;
+          transition: scale 0.2s ease-in-out;
+          &:hover{
+            scale: 1.1;
+        }
+      }
+  }
+}
